@@ -1,0 +1,79 @@
+hostname = vsco.co, api.picsart.c*, viva-asia1.vvbrd.com, api-intl.mr.meitu.com, bmall.camera360.com, api.calm.com, www.calm.com, license.pdfexpert.com, subs.platforms.team, www.peacefulsoundsapp.com, api.blinkist.com, api-kinemaster-assetstore.nexstreaming.com, ap*.intsig.net, lcs-mobile-cops.adobe.io, splice.oracle.*.com, dayone.me, education.github.com
+
+#vsco
+^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body vsco.js
+
+#PicsArt
+^https:\/\/api\.picsart\.com\/users\/show\/me\.json$ url script-response-body picsArt.vip.js
+
+#Vivavideo
+^https:\/\/viva-asia1\.vvbrd\.com\/api\/rest\/u\/vip* url script-response-body vivavideo.vip.js
+
+#buy.itunes.apple.com
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body verify_receipt.js
+
+#beautyplus
+^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$ url script-response-body beautyplusvip.js
+
+#camera360
+^https:\/\/bmall\.camera360\.com\/api\/iap\/check-receipt$ url script-response-body camera360.vip.js
+
+#calm
+^https:\/\/api\.calm\.com\/me$ url script-response-body calm.vip.js
+
+#remove_manage
+^https:\/\/www\.calm\.com\/mobile\/manage-subscription\?token=*  url reject-img
+
+#Pdfexpert
+^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body Pdfexpert.vip.js
+
+#productive
+^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ url script-response-body productive.js
+
+#boom
+;^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url 302 https://raw.githubusercontent.com/langkhach270389/Scripting/master/boom.vip.rsp
+
+#musicalm
+^https:\/\/www\.peacefulsoundsapp\.com\/api\/v1\/init$ url script-response-body musicalm.js
+
+#adguardpremium
+;^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/langkhach270389/Scripting/master/Adguard.rsp
+
+#Blinkist
+^https:\/\/api\.blinkist\.com\/v4\/(me$|me.json$|me\/access$) url script-response-body blinkist.js
+
+#kinemaster
+^https:\/\/api-kinemaster-assetstore\.nexstreaming\.com\/.*\/product\/verifyReceipt$ url script-response-body kinemaster.js
+
+#CamScanner
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body CamScaner.js
+
+#document
+^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body documents.js
+
+#workingcopy
+^https:\/\/education\.github\.com\/api\/user$ url script-response-body workingcopy.js
+
+#photoshop_ipad
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile\/nul\/v1$ url script-response-body photoshop.js
+
+#pre_dayone
+;^https:\/\/dayone\.me\/api\/users$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
+
+#dayone
+^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body dayone.js
+
+# Lich Viet
+;^http:\/\/api\.lichviet\.org\/user\/premiumstatus$ url script-response-body lichviet.js
+
+#splice
+^https:\/\/splice\.oracle\.\w+\.com\/devices\/me url script-response-body splice.js
+
+#Ads Block
+^https?:\/\/play.googleapis.com/log* url reject-img
+^https?:\/\/www.googleapis.com/adsmeasurement/* url reject-img
+^https?:\/\/youtubei.googleapis.com/youtubei/.+ad_ url reject-img
+^https?:\/\/youtubei.googleapis.com/youtubei/.+log_ url reject-img
+^https?://qos-zdn.zaloapp.com/.+trackqos url reject-img
+^https?://centralized.zaloapp.com/.+tracking url reject-img
+^https?://oa.zalo.me/.+campaign=zalo url reject-img
