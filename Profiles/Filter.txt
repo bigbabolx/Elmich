@@ -27,7 +27,6 @@ user-agent, ^https?://qos-zdn.zaloapp.com/.+trackqos , reject
 user-agent, ^https?://centralized.zaloapp.com/.+tracking , reject
 user-agent, ^https?://oa.zalo.me/.+campaign=zalo , reject
 
-host, apple.com, direct
 host, world-gen.g.aaplimg.com, reject
 host, gdmf.apple.com, reject
 host, www.gdmf.apple.com, reject
@@ -38,30 +37,8 @@ host, ocsp.apple.com, reject
 host, idmsa.apple.com, reject
 host, ocsp.int-x3.letsencrypt.org, reject
 host, ppq.apple.com, reject
-host, googleads.g.doubleclick.net, reject
-host, stats.g.doubleclick.net, reject
-host, googletagservices.com, reject
-host, adclick.g.douclick.net, reject
 host, apimboom.globaldelight.net, reject
+host, apimboom2.globaldelight.net, reject
 host, api.mixpanel.com, reject
 host, appldnld.apple.com, reject
-host, play.googleapis.com, reject
-host, app-measurement.com, reject
-host, ads-bidder-api.twitter.com, reject
-host, amazon-adsystem.com, reject
-host, ads.mopub.com, reject
-host, deltago.com, reject
-host, liftoff.io, reject
-host, adsafeprotected.com, reject
-host, www.gstatic.com, reject
-host, branch.io, reject
-host, card.twitter.com, reject
-host, appinvite-ipv6-pa.googleapis.com, reject
-host, appinvite-ipv4-pa.googleapis.com, reject
-host, appinvite-pa.googleapis.com, reject
-host, adthor.com, reject
-host, sdkclick.com, reject
-host, zcoup.com, reject
-host, mads.amazon-adsystem.com, reject
-host, mobtrack.co, reject
 host, lichviet.org, reject
